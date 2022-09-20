@@ -25,7 +25,19 @@ function LoadCountries(){
     <div>
       <h1>Visiting every country of the world</h1>
       <h3>Available countries: {countries.length}</h3>
+      {
+        countries.map(country => <Country name={country.name.common} population={country.population}></Country>)
+      }
 
+    </div>
+  )
+}
+
+function Country(props){
+  return(
+    <div>
+      <h2>Names: {props.name}</h2>
+      <h4>Population: {props.population}</h4>
     </div>
   )
 }
